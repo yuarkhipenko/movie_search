@@ -28,7 +28,7 @@ const debounce = (() => {
 })()
 
 const inputSearchHandler = (e) => {
-  debounce((c) => {
+  debounce(() => {
 
     const searchString = e.target.value.trim();
     if (searchString && searchString.length > 3 && searchLast !== searchString) {
