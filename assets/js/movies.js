@@ -33,7 +33,7 @@ const inputSearchHandler = (e) => {
     const searchString = e.target.value.trim();
     if (searchString && searchString.length > 3 && searchLast !== searchString) {
       if(!treggerMode) clearMoviseMurckup(moviseList)
-      getData(`http://www.omdbapi.com/?apikey=a8b12dfd&s=${searchString}`)
+      getData(`http://www.omdbapi.com/?apikey=18b8609f&s=${searchString}`)
         .then((movies) => movies.forEach((movie) => addMovieToList(movie)))
         .catch(console.log);
     }
