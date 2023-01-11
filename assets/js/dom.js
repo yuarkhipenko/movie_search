@@ -26,7 +26,62 @@ export const creatStyle = () => {
   createElement({
     type: 'style',
     attrs: {
-      innerHTML: ``
+      innerHTML: `*{
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .container {
+        width: min(100% - 40px, 1280px);
+        margin-inline: auto;
+       
+      }
+      
+      .movise {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+       
+      }
+      
+      .movie{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      
+      .movie__image {
+        width: 100%;
+        object-fit: cover;
+      }
+      
+      .search {
+        margin-bottom: 30px;
+      }
+      
+      .search__label-input {
+        display: block;
+        margin-bottom: 7px;
+      }
+      
+      .search__input {
+        display: block;
+        max-width: 400px;
+        width: 100%;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        border: 1px solid lightseagreen;
+      }
+      
+      .search__label-checkbox {
+        font-size: 12px;
+        display: inline-block;
+        transform: translate(7px, -2px);
+      }`
     },
     container: document.head
   });
