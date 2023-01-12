@@ -2,12 +2,13 @@ export let moviseList = null;
 export let inputSearch = null;
 export let treggerMode = false;
 
-const createElement = ({ type,
+const createElement = ({ 
+  type,
   attrs,
   container,
   position = 'append',
   evt,
-  hendler,
+  handler,
 }) => {
   const el = document.createElement(type);
 
@@ -18,7 +19,7 @@ const createElement = ({ type,
 
   if (container && position === 'append') container.append(el);
   if (container && position === 'prepend') container.prepend(el);
-  if (evt && hendler && typeof hendler === 'function') el.addEventListener(evt, hendler)
+  if (evt && handler && typeof handler === 'function') el.addEventListener(evt, handler)
   return el;
 };
 
@@ -151,7 +152,7 @@ export const creatMarkup = () => {
     },
     container: checkBox,
     evt: 'click',
-    hendler: () => treggerMode = !treggerMode
+    handler: () => treggerMode = !treggerMode
   });
 
   createElement({
